@@ -1,9 +1,14 @@
 package com.example.task105
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+
+private const val CODE_KEY = "key for pin code"
+private const val COLOR_KEY = "key for color"
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +33,21 @@ class MainActivity : AppCompatActivity() {
 
         findViews()
         setOnClick()
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        Log.i("MainActivity", pinCode.text.toString())
+        outState.putString(CODE_KEY, pinCode.text.toString())
+        outState.putInt(COLOR_KEY, pinCode.currentTextColor)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        clearEditText()
+        Log.i("MainActivity", "onRestore: ${savedInstanceState.getString(CODE_KEY)}")
+        pinCode.text = savedInstanceState.getString(CODE_KEY)
+        pinCode.setTextColor(savedInstanceState.getInt(COLOR_KEY))
     }
 
     private fun setOnClick() {
@@ -85,7 +105,8 @@ class MainActivity : AppCompatActivity() {
         val correctCode = "1567"
         if (code == correctCode) {
             pinCode.setTextColor(resources.getColor(R.color.blue_white))
-            Toast.makeText(this, "Код верный", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, CorrectCodeActivity::class.java)
+            startActivity(intent)
         } else {
             pinCode.setTextColor(resources.getColor(R.color.red))
         }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ResultActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/profile_image_view"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="135dp"
+            android:layout_marginTop="121dp"
+            android:background="@drawable/profile_image"
+            android:elevation="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="370dp"
+            android:layout_height="73dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="279dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="16sp"
+            android:text="@string/azat_serzhan"
+            android:textAppearance="@style/azat_serzhan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/share_rectangle"
+            android:layout_width="371dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="383dp"
+            android:background="@drawable/rectangle_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/share_tv"
+            android:layout_width="239.28dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="84.12dp"
+            android:layout_marginTop="396dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/share_text"
+            android:textAppearance="@style/appearance_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/mail_rectangle"
+            android:layout_width="371dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="445dp"
+            android:background="@drawable/rectangle_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/send_by_mail_tv"
+            android:layout_width="239.28dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="84.12dp"
+            android:layout_marginTop="458dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/send_by_mail"
+            android:textAppearance="@style/appearance_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/call_rectangle"
+            android:layout_width="371dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="507dp"
+            android:background="@drawable/rectangle_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/call_tv"
+            android:layout_width="239.28dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="84.12dp"
+            android:layout_marginTop="520dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/call"
+            android:textAppearance="@style/appearance_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="371dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="569dp"
+            android:background="@drawable/rectangle_result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/launch_cam_tv"
+            android:layout_width="239.28dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="84.12dp"
+            android:layout_marginTop="582dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/launch_cam"
+            android:textAppearance="@style/appearance_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

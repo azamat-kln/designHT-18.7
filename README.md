@@ -1,4 +1,2 @@
-# hometask-12.5
-Second activity with implicit intents.
-
-Does not exist toolbar and BottomNavigationView
+# hometask-18.7
+Used shape drawable for buttons,animation and vibration

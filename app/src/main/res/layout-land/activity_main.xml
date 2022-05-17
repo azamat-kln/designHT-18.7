@@ -41,213 +41,147 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <View
-            android:id="@+id/rectangle_1"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toStartOf="@id/rectangle_2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/rectangle_2" />
-
-        <TextView
-            android:id="@+id/text_view_1"
-            style="@style/text_view_dimens"
-            android:layout_marginEnd="11dp"
+        <Button
+            android:id="@+id/btn_1"
+            style="@style/button_rectangle_style"
             android:text="@string/text_1"
-            android:textAppearance="@style/text_style"
-            app:layout_constraintEnd_toStartOf="@id/text_view_2"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toStartOf="@id/btn_2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_view_2" />
+            app:layout_constraintTop_toTopOf="@id/btn_2" />
 
-        <View
-            android:id="@+id/rectangle_2"
-            style="@style/view_element_style"
+
+        <Button
+            android:id="@+id/btn_2"
+            style="@style/button_rectangle_style"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edit_code_tv" />
-
-        <TextView
-            android:id="@+id/text_view_2"
-            style="@style/text_view_dimens"
-            android:layout_marginTop="26dp"
             android:text="@string/text_2"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/edit_code_tv" />
 
-        <View
-            android:id="@+id/rectangle_3"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/rectangle_2"
-            app:layout_constraintTop_toTopOf="@id/rectangle_2" />
 
-        <TextView
-            android:id="@+id/text_view_3"
-            style="@style/text_view_dimens"
-            android:layout_marginStart="11dp"
+        <Button
+            android:id="@+id/btn_3"
+            style="@style/button_rectangle_style"
             android:text="@string/text_3"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_view_2"
-            app:layout_constraintTop_toTopOf="@id/text_view_2" />
+            app:layout_constraintStart_toEndOf="@id/btn_2"
+            app:layout_constraintTop_toTopOf="@id/btn_2" />
 
-        <View
-            android:id="@+id/rectangle_4"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toStartOf="@id/rectangle_5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/rectangle_5" />
-
-        <TextView
-            android:id="@+id/text_view_4"
-            style="@style/text_view_dimens"
-            android:layout_marginEnd="11dp"
+        <Button
+            android:id="@+id/btn_4"
+            style="@style/button_rectangle_style"
             android:text="@string/text_4"
-            android:textAppearance="@style/text_style"
-            app:layout_constraintEnd_toStartOf="@id/text_view_5"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toStartOf="@id/btn_5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_view_5" />
+            app:layout_constraintTop_toTopOf="@id/btn_5" />
 
-        <View
-            android:id="@+id/rectangle_5"
-            style="@style/view_element_style"
+
+        <Button
+            android:id="@+id/btn_5"
+            style="@style/button_rectangle_style"
             android:layout_marginTop="36dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_2" />
-
-        <TextView
-            android:id="@+id/text_view_5"
-            style="@style/text_view_dimens"
-            android:layout_marginTop="46dp"
             android:text="@string/text_5"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_2" />
+            app:layout_constraintTop_toBottomOf="@id/btn_2" />
 
-        <View
-            android:id="@+id/rectangle_6"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/rectangle_5"
-            app:layout_constraintTop_toTopOf="@id/rectangle_5" />
-
-        <TextView
-            android:id="@+id/text_view_6"
-            style="@style/text_view_dimens"
-            android:layout_marginStart="11dp"
+        <Button
+            android:id="@+id/btn_6"
+            style="@style/button_rectangle_style"
             android:text="@string/text_6"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_view_5"
-            app:layout_constraintTop_toTopOf="@id/text_view_5" />
+            app:layout_constraintStart_toEndOf="@id/btn_5"
+            app:layout_constraintTop_toTopOf="@id/btn_5" />
 
-        <View
-            android:id="@+id/rectangle_7"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toStartOf="@id/rectangle_8"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/rectangle_8" />
 
-        <TextView
-            android:id="@+id/text_view_7"
-            style="@style/text_view_dimens"
-            android:layout_marginEnd="11dp"
+        <Button
+            android:id="@+id/btn_7"
+            style="@style/button_rectangle_style"
             android:text="@string/text_7"
-            android:textAppearance="@style/text_style"
-            app:layout_constraintEnd_toStartOf="@id/text_view_8"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toStartOf="@id/btn_8"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_view_8" />
+            app:layout_constraintTop_toTopOf="@id/btn_8" />
 
-        <View
-            android:id="@+id/rectangle_8"
-            style="@style/view_element_style"
+
+        <Button
+            android:id="@+id/btn_8"
+            style="@style/button_rectangle_style"
             android:layout_marginTop="36dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_5" />
-
-        <TextView
-            android:id="@+id/text_view_8"
-            style="@style/text_view_dimens"
-            android:layout_marginTop="46dp"
             android:text="@string/text_8"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_5" />
+            app:layout_constraintTop_toBottomOf="@id/btn_5" />
 
-        <View
-            android:id="@+id/rectangle_9"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/rectangle_8"
-            app:layout_constraintTop_toTopOf="@id/rectangle_8" />
-
-        <TextView
-            android:id="@+id/text_view_9"
-            style="@style/text_view_dimens"
-            android:layout_marginStart="11dp"
+        <Button
+            android:id="@+id/btn_9"
+            style="@style/button_rectangle_style"
             android:text="@string/text_9"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_view_8"
-            app:layout_constraintTop_toTopOf="@id/text_view_8" />
+            app:layout_constraintStart_toEndOf="@id/btn_8"
+            app:layout_constraintTop_toTopOf="@id/btn_8" />
 
-        <View
+
+        <Button
             android:id="@+id/rectangle_10"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toStartOf="@id/rectangle_11"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/rectangle_11" />
-
-        <TextView
-            android:id="@+id/text_view_clear"
-            style="@style/text_view_dimens"
-            android:layout_marginEnd="11dp"
+            style="@style/button_rectangle_style"
             android:text="@string/clear"
-            android:textAppearance="@style/text_style"
-            app:layout_constraintEnd_toStartOf="@id/text_view_0"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toStartOf="@id/btn_0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/text_view_0" />
+            app:layout_constraintTop_toTopOf="@id/btn_0" />
 
-        <View
-            android:id="@+id/rectangle_11"
-            style="@style/view_element_style"
+        <Button
+            android:id="@+id/btn_0"
+            style="@style/button_rectangle_style"
             android:layout_marginTop="36dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_8" />
-
-        <TextView
-            android:id="@+id/text_view_0"
-            style="@style/text_view_dimens"
-            android:layout_marginTop="46dp"
             android:text="@string/text_0"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rectangle_8" />
+            app:layout_constraintTop_toBottomOf="@id/btn_8" />
 
-        <View
+        <Button
             android:id="@+id/rectangle_12"
-            style="@style/view_element_style"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/rectangle_11"
-            app:layout_constraintTop_toTopOf="@id/rectangle_11" />
-
-        <TextView
-            android:id="@+id/text_view_ok"
-            style="@style/text_view_dimens"
-            android:layout_marginStart="11dp"
+            style="@style/button_rectangle_style"
             android:text="@string/OK"
-            android:textAppearance="@style/text_style"
+            android:textColor="#1789DB"
+            android:textSize="22sp"
+            app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/text_view_0"
-            app:layout_constraintTop_toTopOf="@id/text_view_0" />
+            app:layout_constraintStart_toEndOf="@id/btn_0"
+            app:layout_constraintTop_toTopOf="@id/btn_0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

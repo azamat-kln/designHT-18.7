@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="text_style">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textColor">#1789DB</item>
-    </style>
-
     <style name="enter_style">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">#808080</item>
@@ -18,10 +13,12 @@
         <item name="android:gravity">center_horizontal|center_vertical</item>
     </style>
 
-    <style name="view_element_style">
+    <style name="button_rectangle_style">
+        <item name="backgroundTint">@null</item>
+        <item name="android:textSize">22sp</item>
         <item name="android:layout_width">81dp</item>
         <item name="android:layout_height">52dp</item>
-        <item name="android:background">@drawable/rectangle_2</item>
+        <!--<item name="android:background">@drawable/normal_state_vector</item>-->
     </style>
 
     <style name="azat_serzhan">

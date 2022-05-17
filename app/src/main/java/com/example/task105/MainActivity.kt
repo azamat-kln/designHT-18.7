@@ -1,21 +1,20 @@
 package com.example.task105
 
-import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
-import androidx.activity.result.contract.ActivityResultContracts
-
+import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var enterCode: TextView
     private lateinit var pinCode: TextView
-    private lateinit var clearTV: TextView
-    private lateinit var okTV: TextView
+    private lateinit var clearBtn: Button
+    private lateinit var okBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,35 +22,35 @@ class MainActivity : AppCompatActivity() {
 
         enterCode = findViewById(R.id.edit_code_tv)
         pinCode = findViewById(R.id.pin_code)
-        clearTV = findViewById(R.id.text_view_clear)
-        okTV = findViewById(R.id.text_view_ok)
+        clearBtn = findViewById(R.id.clear_button)
+        okBtn = findViewById(R.id.ok_button)
 
-        textViewsOnClick()
+        numbersOnClick()
         setOnClick()
     }
 
-    private fun textViewsOnClick() {
-        val textViewsID: Array<Int> = arrayOf(
-            R.id.text_view_0,
-            R.id.text_view_1,
-            R.id.text_view_2,
-            R.id.text_view_3,
-            R.id.text_view_4,
-            R.id.text_view_5,
-            R.id.text_view_6,
-            R.id.text_view_7,
-            R.id.text_view_8,
-            R.id.text_view_9
+    private fun numbersOnClick() {
+        val buttonIDs: Array<Int> = arrayOf(
+            R.id.btn_0,
+            R.id.btn_1,
+            R.id.btn_2,
+            R.id.btn_3,
+            R.id.btn_4,
+            R.id.btn_5,
+            R.id.btn_6,
+            R.id.btn_7,
+            R.id.btn_8,
+            R.id.btn_9
         )
-        textViewsID.forEach {
-            val textView = findViewById<TextView>(it)
-            textView.setOnClickListener {
+        buttonIDs.forEach {
+            val buttonNumber = findViewById<TextView>(it)
+            buttonNumber.setOnClickListener {
                 clearEditText()
-                pinCode.append(textView.text)
+                pinCode.append(buttonNumber.text)
             }
         }
+        clearDigitsOnLongClick()
     }
-
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -66,46 +65,61 @@ class MainActivity : AppCompatActivity() {
         pinCode.setTextColor(savedInstanceState.getInt(Const.COLOR_KEY))
     }
 
-    private fun setOnClick() {
-        clearTV.setOnClickListener {
-            clearEditText()
-            removeLast()
-        }
-        okTV.setOnClickListener {
-            checkIsCodeCorrect()
+    private fun clearDigitsOnLongClick() {
+        clearBtn.setOnLongClickListener {
+            pinCode.text = ""
+            pinCode.setTextColor(ContextCompat.getColor(this, R.color.grey))
+            true
         }
     }
 
-    /*private val resultActivityResult: ActivityResultLauncher<Intent> =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-
-            if (it.resultCode == Activity.RESULT_OK) {
-                val stringExtra: String? = it.data?.getStringExtra(Const.RESULT_KEY)
-                // let(block) executes only when an object is not null
-                stringExtra?.let { result ->
-                    Toast.makeText(this, result, Toast.LENGTH_LONG).show()
-                }
-            }
-
-        }*/
+    private fun setOnClick() {
+        clearBtn.setOnClickListener {
+            clearEditText()
+            removeLast()
+        }
+        okBtn.setOnClickListener {
+            checkIsCodeCorrect()
+        }
+    }
 
     private fun checkIsCodeCorrect() {
         val code = pinCode.text.toString()
         val correctCode = "1567"
         if (code == correctCode) {
-            pinCode.setTextColor(resources.getColor(R.color.blue_white))
+            pinCode.setTextColor(ContextCompat.getColor(this, R.color.blue_white))
             val intent = Intent(this, ResultActivity::class.java)
             startActivity(intent)
-            //resultActivityResult.launch(intent)
         } else {
-            pinCode.setTextColor(resources.getColor(R.color.red))
+            pinCode.setTextColor(ContextCompat.getColor(this, R.color.red))
+            animateAndVibrate()
         }
     }
 
+    private fun animateAndVibrate() {
+        pinCode.startAnimation(AnimationUtils.loadAnimation(this, R.anim.shake_animation))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager =
+                getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            vibratorManager.defaultVibrator.vibrate(
+                VibrationEffect.createOneShot(
+                    200,
+                    VibrationEffect.DEFAULT_AMPLITUDE
+                )
+            )
+        } else {
+            @Suppress("DEPRECATION")
+            val s = getSystemService(VIBRATOR_SERVICE) as Vibrator
+            s.vibrate(200)
+        }
+
+    }
+
     private fun removeLast() {
-        pinCode.setTextColor(resources.getColor(R.color.grey))
+        pinCode.setTextColor(ContextCompat.getColor(this, R.color.grey))
         if (pinCode.text.isNotEmpty()) {
-            pinCode.text = pinCode.text.substring(0, pinCode.text.length - 1)
+            pinCode.text = pinCode.text.dropLast(1)
+            // pinCode.text = pinCode.text.substring(0, pinCode.text.length - 1)
         }
     }
 
